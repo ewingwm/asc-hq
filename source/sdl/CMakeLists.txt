@@ -1,0 +1,5 @@
+file(GLOB SDL_SRC "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
+if(SDL_SRC)
+  add_library(sdl_lib STATIC ${SDL_SRC})
+  target_include_directories(sdl_lib PRIVATE ${CMAKE_SOURCE_DIR}/source)
+endif()

@@ -1,0 +1,5 @@
+file(GLOB LUA_SRC "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp" "${CMAKE_CURRENT_SOURCE_DIR}/*.c")
+if(LUA_SRC)
+  add_library(lua STATIC ${LUA_SRC})
+  target_include_directories(lua PRIVATE ${CMAKE_SOURCE_DIR}/source)
+endif()

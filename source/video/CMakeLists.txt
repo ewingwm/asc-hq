@@ -1,0 +1,5 @@
+file(GLOB VIDEO_SRC "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
+if(VIDEO_SRC)
+  add_library(video STATIC ${VIDEO_SRC})
+  target_include_directories(video PRIVATE ${CMAKE_SOURCE_DIR}/source)
+endif()

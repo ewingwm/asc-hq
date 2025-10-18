@@ -1,0 +1,5 @@
+file(GLOB AI_SRC "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
+if(AI_SRC)
+  add_library(ai STATIC ${AI_SRC})
+  target_include_directories(ai PRIVATE ${CMAKE_SOURCE_DIR}/source)
+endif()

@@ -1,0 +1,5 @@
+file(GLOB UT_SRC "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
+if(UT_SRC)
+  add_library(unittests STATIC ${UT_SRC})
+  target_include_directories(unittests PRIVATE ${CMAKE_SOURCE_DIR}/source)
+endif()

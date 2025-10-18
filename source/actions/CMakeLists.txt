@@ -1,0 +1,5 @@
+file(GLOB ACTIONS_SRC "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
+if(ACTIONS_SRC)
+  add_library(actions STATIC ${ACTIONS_SRC})
+  target_include_directories(actions PRIVATE ${CMAKE_SOURCE_DIR}/source)
+endif()

@@ -1,0 +1,5 @@
+file(GLOB WIDGETS_SRC "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
+if(WIDGETS_SRC)
+  add_library(widgets STATIC ${WIDGETS_SRC})
+  target_include_directories(widgets PRIVATE ${CMAKE_SOURCE_DIR}/source)
+endif()

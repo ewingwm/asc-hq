@@ -1,0 +1,5 @@
+file(GLOB TRIANGUL_SRC "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
+if(TRIANGUL_SRC)
+  add_library(triangul STATIC ${TRIANGUL_SRC})
+  target_include_directories(triangul PRIVATE ${CMAKE_SOURCE_DIR}/source)
+endif()

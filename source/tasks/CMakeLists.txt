@@ -1,0 +1,5 @@
+file(GLOB TASKS_SRC "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
+if(TASKS_SRC)
+  add_library(tasks STATIC ${TASKS_SRC})
+  target_include_directories(tasks PRIVATE ${CMAKE_SOURCE_DIR}/source)
+endif()

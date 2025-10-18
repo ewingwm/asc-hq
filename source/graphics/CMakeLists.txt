@@ -1,0 +1,5 @@
+file(GLOB GRAPHICS_SRC "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
+if(GRAPHICS_SRC)
+  add_library(graphics STATIC ${GRAPHICS_SRC})
+  target_include_directories(graphics PRIVATE ${CMAKE_SOURCE_DIR}/source)
+endif()

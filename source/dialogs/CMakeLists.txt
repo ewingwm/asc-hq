@@ -1,0 +1,5 @@
+file(GLOB DIALOGS_SRC "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
+if(DIALOGS_SRC)
+  add_library(dialogs STATIC ${DIALOGS_SRC})
+  target_include_directories(dialogs PRIVATE ${CMAKE_SOURCE_DIR}/source)
+endif()
